@@ -88,7 +88,7 @@
   width: 200px;
   border-radius: 5px;
   box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
-  padding: 10px;
+  padding: 15px;
   margin: 20px;
   cursor: pointer;
 }
@@ -155,3 +155,47 @@
 }
 
 
+/* /SHIMMER UI______ */
+/* Container for the card */
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 90px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.card-container {
+  margin: 5px;
+  width: 240px; /* Width of the card */
+  height: 435px; /* Height of the card */
+  background-color: #f0f0f0; /* Background color */
+  position: relative; /* Needed for absolutely positioning the shimmer effect */
+  overflow: hidden; /* Hides overflow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Shimmer effect */
+.shimmer {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); /* Gradient for the shimmer effect */
+  background-size: 400% 100%; /* Size of the gradient background */
+  animation: shimmer-animation 1.5s infinite; /* Animation for the shimmer effect */
+  height: 431px;
+  width: 232px;
+  
+}
+
+/* Animation keyframes */
+@keyframes shimmer-animation {
+  0% {
+      background-position: -100% 0; /* Initial background position */
+  }
+  100% {
+      background-position: 100% 0; /* Final background position */
+  }
+}
