@@ -22,7 +22,9 @@ const RestaurantCard = ({
               ? { backgroundColor: "green", color: "white" }
               : { backgroundColor: "orangered", color: "white" }
           }
-        ></h4>
+        >
+          {avgRating}
+        </h4>
         <h4>{lastMileTravelString}</h4>
         <h4>{costForTwoString}</h4>
       </span>

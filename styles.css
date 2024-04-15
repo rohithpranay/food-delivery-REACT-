@@ -84,7 +84,7 @@
   justify-content: center;
 }
 
-.card {
+.res-card {
   width: 200px;
   border-radius: 5px;
   box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
@@ -93,27 +93,24 @@
   cursor: pointer;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
 
-.card > img {
+.res-card > img {
   width: 100%;
   border-radius: 10px;
 }
 
-.card > span {
+.res-card > span {
   display: flex;
   justify-content: space-evenly;
   margin-top: 10px;
   text-align: center;
 }
 
-.card > span > h4 {
+.res-card > span > h4 {
   font-size: medium;
 }
 
-.card > span > h4:first-child {
+.res-card > span > h4:first-child {
   display: flex;
   align-items: center;
   background-color: rgb(19, 176, 1);
@@ -122,7 +119,7 @@
   color: white;
 }
 
-.card > span > h4:first-child .fa-star {
+.res-card > span > h4:first-child .fa-star {
   font-size: small;
   padding: 0 10px 3px 0;
 }
@@ -153,37 +150,8 @@
   font-size: 21px;
   cursor: pointer;
 }
-
-/* Styles for Restaurant Card */
-.res-container{
-  width: 100%;
-  height: 80%;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+.res-card:hover {
+  transform: scale(1.05);
 }
 
-.res-card {
-    width: 25%;
-    /* height: 20%; */
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-}
-
-.res-logo {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.res-card h3 {
-  margin: 3px;
-  font-size: 17px;
-  font-weight: 600;
-}
 
