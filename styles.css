@@ -38,6 +38,12 @@
   font-size: large;
   cursor: pointer;
 }
+.login-btn{
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+}
 
 /* Body CSS */
 .search-container {

@@ -1,47 +1,38 @@
 const Shimmer = () => {
   return (
     <div className="shimmer-container">
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
-      </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
-      </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
-      </div>
-      <div class="card-container">
-        <div class="shimmer"></div>
+      <div className="card-container">
+        <div className="shimmer"></div>
       </div>
     </div>
   );

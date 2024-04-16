@@ -4,8 +4,9 @@ import { swiggy_api_URL } from "../utils/constants";
 import Shimmer from "./shimmer";
 
 function filterData(searchText, restaurants) {
+  console.log(searchText, restaurants);
   let filteredData = restaurants.filter((res) =>
-    res?.data?.name.toLowerCase().includes(searchText.toLowerCase())
+    res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
   return filteredData;
@@ -14,6 +15,8 @@ const Body = () => {
   // useState: To create a state variable, searchText is local state variable
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
+  const [filteredRestaurants, setfilteredRestaurants] = useState([]);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -38,6 +41,7 @@ const Body = () => {
       const resData = await checkJsonData(jsonData);
 
       setRestaurants(resData);
+      setfilteredRestaurants(resData);
     } catch (error) {
       console.error(error);
     }
@@ -45,7 +49,7 @@ const Body = () => {
   // ////////////
   // conditional rendering
   // ///////////
-  return restaurants.length === 0 ? (
+  return filteredRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <>
@@ -62,16 +66,16 @@ const Body = () => {
           onClick={() => {
             // filter the data
             const data = filterData(searchText, restaurants);
+
             // update the state of restaurants list
-            setRestaurants(data);
+            setfilteredRestaurants(data);
           }}
         >
           Search
         </button>
       </div>
       <div className="restaurant-list">
-        {restaurants.map((restaurant) => {
-          console.log(restaurant);
+        {filteredRestaurants.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
           );
