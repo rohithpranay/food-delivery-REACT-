@@ -8,3 +8,7 @@ export const LOGO_URL =
 // Swiggy API to get Restaurant data with foodfire erver
 export const swiggy_api_URL =
   "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
+
+// Swiggy API to get Restaurant Menu data with foodfire erver
+export const Dyn_Res_api_URL =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=16.9890648&lng=82.2474648&restaurantId=610299&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER";
