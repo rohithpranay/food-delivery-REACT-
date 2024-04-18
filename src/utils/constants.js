@@ -11,4 +11,4 @@ export const swiggy_api_URL =
 
 // Swiggy API to get Restaurant Menu data with foodfire erver
 export const Dyn_Res_api_URL =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=16.9890648&lng=82.2474648&restaurantId=610299&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER";
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=16.9890648&lng=82.2474648&restaurantId=";

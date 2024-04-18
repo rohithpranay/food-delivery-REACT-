@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { Dyn_Res_api_URL } from "../utils/constants";
 import Shimmer from "./shimmer";
+import { useParams } from "react-router-dom";
 
 const DynamicRes = () => {
   const [resInfo, setResInfo] = useState(null);
+
+  const { resId } = useParams();
 
   useEffect(() => {
     fetchDetails();
   }, []);
 
   const fetchDetails = async () => {
-    const response = await fetch(Dyn_Res_api_URL);
+    const response = await fetch(Dyn_Res_api_URL + resId);
     const jsonData = await response.json();
     setResInfo(jsonData);
   };
@@ -21,8 +24,11 @@ const DynamicRes = () => {
 
   const { itemCards } =
     resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card
-      .card;
-  console.log(itemCards);
+      .card || [];
+  console.log(
+    resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
+  );
+
   return (
     <div>
       <div className="menu">
@@ -32,8 +38,9 @@ const DynamicRes = () => {
       </div>
       <div className="menu-items">
         <ul>
-          {itemCards.map((item) => (
-            <li>{item?.card?.info?.name}</li>
+          {console.log(itemCards)}
+          {itemCards?.map((item) => (
+            <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>
           ))}
         </ul>
       </div>
